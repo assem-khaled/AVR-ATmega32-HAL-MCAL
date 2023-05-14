@@ -89,7 +89,7 @@ u8 EEPROM_u8ReadByte(u8 addr, u8 *data)
   { return NACK;}
 
   //Send Slave Address -> For EEPROM 24cXX Address of Chip is 0b1010
-  //  Set Action To Write -> 1
+  //  Set Action To Write -> 0
   // So, we need to send 0xA0
 
 
@@ -126,7 +126,7 @@ u8 EEPROM_u8ReadByte(u8 addr, u8 *data)
     return NACK;
 
   // Send Slave Address -> For EEPROM 24cXX Address of Chip is 0b1010
-  //  Set Action To Write -> 1
+  //  Set Action To read -> 1
   // So, we need to send 0xA1
 
 
